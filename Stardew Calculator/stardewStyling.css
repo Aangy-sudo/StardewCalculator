@@ -8,9 +8,46 @@ body {
     margin: 0;
 }
 
+.titleContainer {
+    display: flex;
+    /* justify-content: center; */
+    align-items: flex-start;
+    width: 70vh;
+    height: 30vh;
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: 70px;
+    margin-top: 30px;
+    
+}
+
+.stardewLogo {
+    position: relative;
+    margin-left: 100px;
+    margin-top: 70px;
+    margin-right: -60px;
+}
+
 .pixel {
     font-family: "Pixelify Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: bold;
     color: beige;
+    position: relative;
+    margin-left: 100px;
+    
   }
+
+.hFirst {
+    margin-left: 0px;
+    margin-top: 70px;
+}
+
+.hSecond {
+    margin-left: 0px;
+    margin-top: -20px;
+}
+
+.catchPhrase {
+    margin-left: 0px;
+    margin-top: -10px;
+}
