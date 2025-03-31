@@ -1,22 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stardew Calculator</title>
-    <link rel="stylesheet" href="stardewStyling.css">
-    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stardew Calculator</title>
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="stardewStyling.css" />
+  <link rel="stylesheet" href="numbersStyling.css" />
+  
+  <!-- JavaScript -->
+  <script src="stardewScript.js" defer></script>
 </head>
+
 <body>
-    <div class="titleContainer">
-        <img class="stardewLogo" src="./assets/StardewLogo.png" height="100" width="100">
-        <div class="pixel">
-            <h1 class="hFirst">Stardew Valley</h1>
-            <h1 class="hSecond">Calculator</h1>
-            <p class="catchPhrase">From farm to profit—math makes it happen.</p>
-        </div>
+  <div class="titleContainer">
+    <img class="stardewLogo" src="./assets/StardewLogo.png" height="100" width="100" />
+    <div class="pixel">
+      <h1 class="hFirst">Stardew Valley</h1>
+      <h1 class="hSecond">Calculator</h1>
+      <p class="catchPhrase">From farm to profit—math makes it happen.</p>
     </div>
-    
+  </div>
+
+  <div class="calculator">
+    <input type="text" id="display" readonly />
+
+    <div class="buttons">
+      <!-- Top row -->
+      <button onclick="clearDisplay()">AC</button>
+      <button onclick="toggleSign()">±</button>
+      
+      <button onclick="append('%')">%</button>
+      <button onclick="deleteLast()">⌫</button>
+      <button onclick="append('/')">÷</button>
+
+      <!-- Number rows -->
+      <button onclick="append('7')">7</button>
+      <button onclick="append('8')">8</button>
+      <button onclick="append('9')">9</button>
+      <button onclick="append('*')">×</button>
+
+      <button onclick="append('4')">4</button>
+      <button onclick="append('5')">5</button>
+      <button onclick="append('6')">6</button>
+      <button onclick="append('-')">−</button>
+
+      <button onclick="append('1')">1</button>
+      <button onclick="append('2')">2</button>
+      <button onclick="append('3')">3</button>
+      <button onclick="append('+')">+</button>
+
+      <button onclick="append('0')">0</button>
+      <button onclick="append('.')">.</button>
+      <button class="equal" onclick="calculateResult()">=</button>
+    </div>
+  </div>
 </body>
 </html>
-
