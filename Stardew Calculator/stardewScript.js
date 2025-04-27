@@ -20,8 +20,7 @@ function toggleSign() {
 
 function calculateResult() {
     try {
-        // Replace % with /100 for percentage functionality
-        let expression = display.value; // ✅ This keeps % as modulo
+        let expression = display.value; 
         let result = eval(expression);
         display.value = result;
     } catch (e) {
